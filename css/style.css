@@ -263,6 +263,6 @@ img {
   }
 
   .flex-grid .column img{
-    height: unset;
+    height: 45%;
   }
 }
