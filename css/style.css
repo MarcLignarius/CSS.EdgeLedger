@@ -111,6 +111,11 @@ img {
   margin: 20px 0 30px;
 }
 
+#blog .hero {
+  background: url('../img/home/blog.jpg') no-repeat center center/cover;
+  height: 30vh;
+}
+
 /* Icons */
 
 .icons {
