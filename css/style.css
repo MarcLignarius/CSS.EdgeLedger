@@ -261,4 +261,8 @@ img {
     flex: 50%;
     max-width: 100%;
   }
+
+  .flex-grid .column img{
+    height: unset;
+  }
 }
