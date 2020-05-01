@@ -91,24 +91,27 @@
         <header class="section-header">
           <h4>This is what we do</h4>
           <h2>Business Cases</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, repudiandae.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            repudiandae.
+          </p>
         </header>
         <div class="row">
           <div class="column">
-            <img src="./img/cases/cases1.jpg" alt="">
-            <img src="./img/cases/cases2.jpg" alt="">
+            <img src="./img/cases/cases1.jpg" alt="" />
+            <img src="./img/cases/cases2.jpg" alt="" />
           </div>
           <div class="column">
-            <img src="./img/cases/cases3.jpg" alt="">
-            <img src="./img/cases/cases4.jpg" alt="">
+            <img src="./img/cases/cases3.jpg" alt="" />
+            <img src="./img/cases/cases4.jpg" alt="" />
           </div>
           <div class="column">
-            <img src="./img/cases/cases5.jpg" alt="">
-            <img src="./img/cases/cases6.jpg" alt="">
+            <img src="./img/cases/cases5.jpg" alt="" />
+            <img src="./img/cases/cases6.jpg" alt="" />
           </div>
           <div class="column">
-            <img src="./img/cases/cases7.jpg" alt="">
-            <img src="./img/cases/cases1.jpg" alt="">
+            <img src="./img/cases/cases7.jpg" alt="" />
+            <img src="./img/cases/cases1.jpg" alt="" />
           </div>
         </div>
       </section>
@@ -140,21 +143,24 @@
         <header class="section-header">
           <h4>Who we are</h4>
           <h2>Our Professional Team</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, repudiandae.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            repudiandae.
+          </p>
         </header>
         <div class="flex-items">
           <div>
-            <img src="./img/team/person1.jpg" alt="">
+            <img src="./img/team/person1.jpg" alt="" />
             <h4>John Doe</h4>
             <p>President</p>
           </div>
           <div>
-            <img src="./img/team/person2.jpg" alt="">
+            <img src="./img/team/person2.jpg" alt="" />
             <h4>Jane Doe</h4>
             <p>Vice-President</p>
           </div>
           <div>
-            <img src="./img/team/person3.jpg" alt="">
+            <img src="./img/team/person3.jpg" alt="" />
             <h4>Steve Smith</h4>
             <p>Head of Marketing</p>
           </div>
@@ -174,17 +180,32 @@
               <form action="" class="callback-form">
                 <div class="form-control">
                   <label for="name"></label>
-                  <input type="text" name="name" id="name" placeholder="Enter your name">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                  />
                 </div>
                 <div class="form-control">
                   <label for="email"></label>
-                  <input type="email" name="email" id="email" placeholder="Enter your email address">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email address"
+                  />
                 </div>
                 <div class="form-control">
                   <label for="phone"></label>
-                  <input type="text" name="phone" id="phone" placeholder="Enter your phone number">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                  />
                 </div>
-                <input type="submit" value="Send" id="submit" class="btn">
+                <input type="submit" value="Send" id="submit" class="btn" />
               </form>
             </div>
           </div>
@@ -200,25 +221,46 @@
       </div>
       <p>Copyright &copy; 2020 - EdgeLedger</p>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
     <script>
-      const navbar = document.getElementById('navbar');
+      const navbar = document.getElementById("navbar");
       let scrolled = false;
 
-      window.onscroll = function() {
-        if(window.pageYOffset > 100) {
-          navbar.classList.remove('top');
-          if(!scrolled) {
-            navbar.style.transform = 'translateY(-70px)';
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
           }
-          setTimeout(function() {
-            navbar.style.transform = 'translateY(0)';
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
             scrolled = true;
           }, 200);
         } else {
-          navbar.classList.add('top');
+          navbar.classList.add("top");
           scrolled = false;
         }
-      }
+      };
+
+      // Smooth Scrolling
+      $('#navbar a, .btn').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });
     </script>
   </body>
 </html>
