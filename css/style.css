@@ -123,6 +123,10 @@ img {
   height: 30vh;
 }
 
+#success .hero {
+  height: 80vh;
+}
+
 /* Icons */
 
 .icons {
